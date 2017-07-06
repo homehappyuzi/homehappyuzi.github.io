@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+<style>
+	*{margin: 0; padding: 0;}
+	html,body{
+		height: 100%;
+		font-size: 100px;
+	}
+	body{
+		font-size: 0;
+	}
+	.edge{
+		width: 7.5rem;
+		font-family: "微软雅黑";
+	}
+	.box{
+		overflow: hidden;
+		width: 7.5rem;
+		height: 0.88rem;
+		background:#8eebd0 ;
+	}
+	.employ{
+		margin-top: 0.25rem;
+		margin-left: 0.20rem;
+		width: 0.28rem;
+		height: 0.38rem;
+		background: url(images/fanhui.png)0 0 no-repeat;
+		background-size: 100% 100%;
+	}
+	.photoprint{
+		height: 2.21rem;
+		width: 2.21rem;
+		background: url(images/图层-5@2x.png) 0 0 no-repeat;
+		background-size: cover;
+		margin: 0 auto;
+		margin-top: 1.62rem;
+	}
+	.spaing{
+		height: 1.18rem;
+		width: 2.8rem;
+		text-align:center ;
+		line-height: 1.18rem;
+		font-size:0.22rem;
+		color:#000000 ;
+		margin: 0 auto;
+		margin-top: 0.42rem;
+	}
+</style>
+</head>
+<body>
+<script>
+function resetRem(){
+	var deviceWidth=document.documentElement.clientWidth;//设备的宽
+	var scale=deviceWidth/750;// 640 设计图的宽
+	var html=document.getElementsByTagName('html')[0];
+	html.style.fontSize=100*scale+'px';
+}
+resetRem();
+window.onresize=function (){
+	resetRem();
+}
+</script>
+<div class="edge">
+	<div class="box">
+		<div class="employ"></div>
+	</div>
+	<div class="photoprint"></div>
+	<div class="spaing">没网了，宝宝也很无奈啊……</div>
+</div>
+</body>
+</html>
