@@ -1,3 +1,3 @@
-# homehappyuzi.gihtub.io
-# homehappyuzi.gihtub.io
+# homehappyuzi.github.io
+# homehappyuzi.github.io
 # homehappyuzi
