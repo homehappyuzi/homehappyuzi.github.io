@@ -1,12 +1,112 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<title>标题</title>
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+<meta charset="utf-8">
+<title>标题</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<style>
+	* { padding: 0; margin: 0; }
+	body { background: #f6f9fc; font-family: arial; }
+	li { list-style: none; }
+	.wai{
+		 width: 210px; margin: 50px auto 0; padding: 10px 10px 20px 20px; background: #eae9e9;
+	}
+	.shang{
+		width: 210px; overflow: hidden; padding-bottom: 10px; 
+	}
+	.shang span{
+		float: left; width: 58px; height: 54px; margin: 10px 10px 0 0; border: 1px solid #fff; background: #424242; color: #fff; text-align: center; cursor: pointer;
+	}
+	.shang span h2{
+		font-size: 20px; padding-top: 5px; 
+	}
+	.shang span p{
+		 font-size: 14px;
+	}
+	/* .wai .shang{
+		border: 1px solid #424242; background: #fff; color: #e84a7e;
+	} */
+	.wai .shang p{
+		font-weight: bold;
+	}
+ 	#huodong { width: 178px; padding: 0 10px 10px; border: 1px solid #fff; padding-top: 10px; background: #f1f1f1; color: #555; }
+	.wai .huodong span{
+		font-size: 14px; margin-bottom: 10px;
+	}
+	.wai.huodong p{
+		font-size: 14px; line-height: 18px;
+	}
+	.huodong h2{
+		font-size: 14px; line-height: 18px;
+	}
+	.bian:hover{
+		background: #fff;color: red;
+		border:1px solid #424242
+	}
+
+
+</style>
+
+
+
+
 </head>
 <body>
-	<h1>asdsadsasdas</h1>
+<div class="wai"  id="tab">
+	<div class="shang">
+		<span class="bian"><h2>1</h2><p>JAN</p></span>
+		<span class="bian"><h2>2</h2><p>FER</p></span>
+		<span class="bian"><h2>3</h2><p>MAR</p></span>
+		<span class="bian"><h2>4</h2><p>APR</p></span>
+		<span class="bian"><h2>5</h2><p>MAY</p></span>
+		<span class="bian"><h2>6</h2><p>JUN</p></span>
+		<span class="bian"><h2>7</h2><p>JUL</p></span>
+		<span class="bian"><h2>8</h2><p>AUG</p></span>
+		<span class="bian"><h2>9</h2><p>SEP</p></span>
+		<span class="bian"><h2>10</h2><p>CTR</p></span>
+		<span class="bian"><h2>11</h2><p>NOV</p></span>
+		<span class="bian"><h2>12</h2><p>DEC</p></span>
+	</div>
+	<div id="huodong">
+		<h2>1月活动</h2>
+		<p>春游踏青活动</p>
+	</div>
+</div>
+
+<script>
+var arr=['春游踏青活动','野外露营活动','西藏自驾游','海南三亚洗白白','泰国看人妖','韩国整容','非洲阳光浴','登钓鱼岛钓鱼','帝都体验雾霾','长城体验人挤人','陪你去东北看雪','生蛋生蛋快乐'];
+window.onload=function (){
+    var tab=document.getElementById("tab");
+    var aLi=tab.getElementsByTagName("span");
+   	var oDiv=document.getElementById("huodong")
+    for (var i=0; i<aLi.length; i++){
+        aLi[i].onmouseover=function (){
+            for (var i=0; i<aLi.length; i++){
+                if (this==aLi[i]){
+                    // aLi[i].className="bian";
+                    oDiv.innerHTML='<h2>'+(i+1)+'月活动</h2><p>'+arr[i]+'</p>';
+                }else{
+                    // aLi[i].className="";
+                }
+            }
+        }
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
